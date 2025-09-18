@@ -1,0 +1,22 @@
+/**
+ *
+ * @author Angie
+ */
+public class Die {
+    private int sides = 6;
+    private int value;
+    
+    public Die(){
+        sides = 6;
+        value = (int) (Math.random() * 6 + 1); 
+    }
+    
+    public void roll(){
+        value += value;
+    }
+    
+    public int getValue(){
+        return value;
+    }
+    
+}
