@@ -1,0 +1,56 @@
+/**
+ *
+ * @author ailem
+ */
+//imports the Scanner class
+import java.util.Scanner;
+public class AGameOfTwentyOne {
+
+    public static void main(String[] args) {
+        
+        //creates a variable to allow the user to play again
+        boolean userPlaysAgain = false;
+        //do-while loop        
+        do{
+            //creates a new Scanner object
+            Scanner userInput = new Scanner(System.in);
+            //asks the user if they wanted to roll the dice
+            System.out.println("Would you like to roll the dice? ");
+            //allows the user to input their data
+            String user = userInput.nextLine();
+            
+            //char userAnswer = Character.toLowerCase(user.charAt(0));
+            
+            Die cd1 = new Die();
+            
+            cd1.roll();
+            
+            cd1.getValue();
+            
+            Die ud1 = new Die();
+            
+            ud1.roll();
+            
+            ud1.getValue();
+            
+            if(cd1.getValue() > ud1.getValue() && cd1.getValue() < 21){
+                System.out.println("computer wins" + cd1.getValue());
+            }
+            else if(ud1.getValue() > cd1.getValue() && ud1.getValue() < 21){
+                System.out.println("user wins ");
+            }
+            else{
+                System.out.println("no one won");
+            }
+            
+            //System.out.println("Would you like to roll again? ");
+            String playAgain = userInput.nextLine();
+            if(playAgain.charAt(0) == 'y' || playAgain.charAt(0) == 'Y'){
+                userPlaysAgain = true;
+            }
+
+        }while(userPlaysAgain);
+       
+                     
+    }
+}
