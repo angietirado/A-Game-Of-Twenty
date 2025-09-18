@@ -1,0 +1,36 @@
+/**
+ *progaming chapter 6 #2
+ * this class will have to display how far a car is going braking 
+ * and what year and make the car is 
+ * @author skyygaimo
+ * @since 1/9/24
+ */
+//public class cardriver
+ public class CarDriver {
+//public static void main(String [] argos)
+ public static void main(String [] args){
+    //car car1 - new car(2016, “Honda”
+    Car car1 = new Car(2016, "Honda");
+    //display (“acceleration
+    System.out.println("Acceleration....");
+    //for (int seconds = 1; seconds <= 5; seconds ++
+    for( int seconds = 1; seconds <= 5;seconds ++) {
+	  //car1.acceleration
+        car1.accelerate();
+	  //display (“current speed of the “, car1.getyoumode() + “” + car1.getgetmake() is + car1.getspeed + km/h
+        System.out.println("Current speed of the ", car1.getYearMode() + "" + car1.getgetMake()+ " is " + 
+                car1.getSpeed()+ " km/h");
+    }
+   //display breaking
+    System.out.println("\nBreaking....");
+    //for (int seconds = 1; seconds <= 5; seconds ++
+    for( int seconds = 1; seconds <= 5;seconds ++) {
+	  //car1.brake()
+        car1.brake();
+	  //display current speed of the car1.getmode + car1.getgetmake is + car1.getspeed + lm/h
+        System.out.println("Current speed of the ", car1.getYearMode() + "" + car1.getgetMake()+ " is " + 
+                car1.getSpeed()+ " km/h");
+    
+ }
+
+
